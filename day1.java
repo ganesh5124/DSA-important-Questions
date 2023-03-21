@@ -77,7 +77,31 @@ class Day {
         }
         System.out.println("sum of Array "+ sum + " And its product is "+ product);
     }
-    // public 
+    void reverseOfArray(int arr[]){
+        for (int i = 0; i < arr.length/2; i++) {
+            int n = arr.length-i-1;
+            int temp = arr[i];
+            arr[i] = arr[n];
+            arr[n] = temp;
+        }
+
+        System.out.println(Arrays.toString(arr));
+    }
+
+    void printunOrderedPairs(int arr[]){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i+1; j < arr.length; j++) {
+                System.out.println(arr[i] + " , "+ arr[j]);
+            }
+        }
+    }
+    void printunOrderedPairs2(int arr[]){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.println(arr[i] + " , "+ arr[j]);
+            }
+        }
+    }
     public static void main(String args[]){
          Day day = new Day();
         // var result = day.numSum(123);
@@ -90,13 +114,14 @@ class Day {
         // Factorial of a number
         // var fact = day.factoril(2);
         OddFunction odd = new OddFunction();
-        int arr[] ={4,6,8,5};
-        var some = day.someRecursive(arr, odd );
-        var str1 = day.reverseofString("hello");
-        var val = day.maxofArray(arr, 4);
-
-        day.spofArray(arr);
-        // System.out.println(val);
+        int arr[] ={4,6,8,5,9};
+        // var some = day.someRecursive(arr, odd );
+        // var str1 = day.reverseofString("hello");
+        // var val = day.maxofArray(arr, 4);
+        // int x = 5;
+        // day.reverseOfArray(arr);
+        day.printunOrderedPairs2(arr);
+        // System.out.println("x value "+ ++x);
         
     }
 }
