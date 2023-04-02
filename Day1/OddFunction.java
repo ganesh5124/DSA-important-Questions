@@ -1,3 +1,4 @@
+package Day1;
 
 public class OddFunction {
     boolean run(int num){
